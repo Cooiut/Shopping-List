@@ -4,9 +4,11 @@ public class StoreItem {
     private String item, key;
     private double quantity;
 
-    public StoreItem() {};
+    public StoreItem() {
+    }
 
-    public StoreItem(String key, String item, double quantity){
+
+    public StoreItem(String key, String item, double quantity) {
         this.key = key;
         this.item = item;
         this.quantity = quantity;
@@ -22,5 +24,9 @@ public class StoreItem {
 
     public String getKey() {
         return key;
+    }
+
+    public void setQuantity(double num) {
+        quantity = num;
     }
 }
