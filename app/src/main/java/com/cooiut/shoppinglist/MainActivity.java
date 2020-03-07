@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         items = new ArrayList<StoreItem>();
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerViewList);
+        recyclerView = findViewById(R.id.recyclerViewList);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void add(View view) {
-        EditText item = (EditText) findViewById(R.id.editTextItem);
-        EditText quantity = (EditText) findViewById(R.id.editTextQuantity);
+        EditText item = findViewById(R.id.editTextItem);
+        EditText quantity = findViewById(R.id.editTextQuantity);
         String i = item.getText().toString();
         double q = Double.parseDouble((quantity.getText().toString()));
 
@@ -78,6 +78,5 @@ public class MainActivity extends AppCompatActivity {
         ((ItemViewAdapter) adapter).update(items);
         item.setText("");
         quantity.setText("");
-
     }
 }
