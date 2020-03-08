@@ -37,6 +37,8 @@ public class ItemViewAdapter extends RecyclerView.Adapter {
     }
 
     public void deleteItem(int position) {
+        StoreItem s = (StoreItem) list.get(position);
+        myRef.child(s.getKey()).removeValue();
         list.remove(position);
         notifyDataSetChanged();
     }
@@ -84,10 +86,10 @@ public class ItemViewAdapter extends RecyclerView.Adapter {
             buttonPurchased.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.d("PurchasedClicked", "Button Pressed with position ");
+//                    Log.d("PurchasedClicked", "Button Pressed with position ");
                     int position = getAdapterPosition();
-                    updateQuantity(position);
-                    buttonPurchased.setEnabled(false);
+                    deleteItem(position);
+//                    buttonPurchased.setEnabled(false);
                 }
             });
         }
