@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -78,5 +79,13 @@ public class MainActivity extends AppCompatActivity {
         ((ItemViewAdapter) adapter).update(items);
         item.setText("");
         quantity.setText("");
+    }
+
+    public void changeToChart(View view) {
+        Intent intent = new Intent(this, Chart.class);
+        Bundle bundle = new Bundle();
+        bundle.putParcelableArrayList("arraylist", items);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }

@@ -8,7 +8,7 @@
     app:cardCornerRadius="12dp"
     app:cardElevation="8dp">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:id="@+id/item_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,21 +16,21 @@
 
         <TextView
             android:id="@+id/textViewNumber"
-            android:layout_width="63dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Number" />
 
         <TextView
             android:id="@+id/textViewItem"
-            android:layout_width="206dp"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Item" />
 
         <TextView
             android:id="@+id/textViewQuantity"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Quantity" />
